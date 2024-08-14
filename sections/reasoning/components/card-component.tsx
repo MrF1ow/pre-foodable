@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody } from "@nextui-org/card";
 const CardComponent = ({ Icon, title, description }: CardComponentProps) => {
   return (
     <Card
-      className="w-[200px] h-[150px]"
+      shadow="lg"
     >
       <CardHeader className="flex items-center justify-center">
         <Icon size={48} />

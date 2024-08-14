@@ -7,19 +7,9 @@ import { title, subtitle, button } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 import Reasoning from "@/sections/reasoning";
+import { moveIn, container } from "@/components/movements";
 
-import { animate, motion, Variant } from "framer-motion";
-
-const container = {
-  initial: {},
-  animate: { transition: { staggerChildren: 0.1 } },
-};
-
-const moveIn = {
-  initial: { opacity: 0, y: 10 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.8 } as Variant,
-};
+import { motion } from "framer-motion";
 
 export default function IndexPage() {
   return (
