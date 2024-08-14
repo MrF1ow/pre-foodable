@@ -6,35 +6,60 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle, button } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import { tree } from "next/dist/build/templates/app-page";
+import Reasoning from "@/sections/reasoning";
+
+import { animate, motion, Variant } from "framer-motion";
+
+const container = {
+  initial: {},
+  animate: { transition: { staggerChildren: 0.1 } },
+};
+
+const moveIn = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.8 } as Variant,
+};
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-start justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-lg text-left justify-start gap-4">
-          <h1 className={title({ size: "lg", color: "green" })}>Foodable</h1>
-          <br />
-          <h1 className={title({ size: "sm", fullWidth: true })}>
-            Making Food More Doable.
-          </h1>
-          <h4 className={subtitle({ class: "mt-4" })}>Coming Soon ...</h4>
-        </div>
-
-        <div className="flex gap-3">
-          <Button radius="md" className={button({ size: "lg" })}>
-            Join Waitlist
-          </Button>
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
+      <section className="flex flex-col items-start justify-center gap-4 py-8 md:py-10 h-allIsh">
+        <div className="inline-block max-w-lg text-left justify-start gap-8">
+          <motion.div initial="initial" animate="animate" variants={container}>
+            <motion.h1
+              className={title({ size: "lg", color: "green", fullWidth: true })}
+              variants={moveIn}
+            >
+              Foodable
+            </motion.h1>
+            <br />
+            <motion.h1
+              className={title({ size: "sm", fullWidth: true })}
+              variants={moveIn}
+            >
+              Making Food More Doable.
+            </motion.h1>
+            <motion.h4 className={subtitle({ class: "mt-4" })} variants={moveIn}>
+              Coming Soon ...
+            </motion.h4>
+          </motion.div>
+          <motion.div className="flex gap-3" variants={moveIn}>
+            <Button radius="md" className={button({ size: "lg" })}>
+              Join Waitlist
+            </Button>
+            <Link
+              isExternal
+              className={buttonStyles({ variant: "bordered", radius: "full" })}
+              href={siteConfig.links.github}
+            >
+              <GithubIcon size={20} />
+              GitHub
+            </Link>
+          </motion.div>
         </div>
       </section>
+      <Reasoning />
     </DefaultLayout>
   );
 }

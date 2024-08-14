@@ -65,3 +65,26 @@ export const button = tv({
     size: "md",
   },
 });
+
+export const text = tv({
+  base: "text-default-500",
+  variants: {
+    size: {
+      sm: "text-sm",
+      md: "text-base",
+      lg: "text-lg",
+    },
+    color: {
+      violet: "from-[#FF1CF7] to-[#b249f8]",
+      yellow: "from-[#FF705B] to-[#FFB457]",
+      blue: "from-[#5EA2EF] to-[#0072F5]",
+      cyan: "from-[#00b7fa] to-[#01cfea]",
+      green: "from-[#6FEE8D] to-[#1BED95]",
+      pink: "from-[#FF72E1] to-[#F54C7A]",
+      foreground: "dark:from-[#f8f9fa] dark:to-[#4B4B4B]",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+  },
+});
