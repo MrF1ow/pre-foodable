@@ -7,6 +7,7 @@ import { title, subtitle, button } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 import Reasoning from "@/sections/reasoning";
+import Features from "@/sections/features";
 import { moveIn, container } from "@/components/movements";
 
 import { motion } from "framer-motion";
@@ -50,6 +51,7 @@ export default function IndexPage() {
         </div>
       </section>
       <Reasoning />
+      <Features />
     </DefaultLayout>
   );
 }
