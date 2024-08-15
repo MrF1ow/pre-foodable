@@ -7,9 +7,9 @@ import SectionLayout from "@/layouts/section";
 
 const Reasoning = () => {
   return (
-    <SectionLayout>
-      <div className="w-full text-center py-8">
-        <h1 className={title({ size: "sm", color: "green" })}>
+    <SectionLayout color="#1BED95">
+      <div className="w-full text-center pb-8">
+        <h1 className={title({ size: "sm", color: "black" })}>
           Why Finding Good Healthy Food for the Right Price is Hard
         </h1>
       </div>

@@ -8,7 +8,7 @@ import FeatureCard from "./components/feature-card";
 const Features = () => {
   return (
     <SectionLayout>
-      <div className="w-full text-center py-8">
+      <div className="w-full text-center pb-8">
         <div className="pb-8">
           <h1 className={title({ size: "sm", color: "green" })}>
             Lets Change That!
