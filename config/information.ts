@@ -41,3 +41,26 @@ export const featureCards = [
     description: "Understand the nutritional information of food.",
   },
 ];
+
+export const faqQuestions = [
+  {
+    question: "What is Foodable?",
+    answer:
+      "Foodable is a platform that helps you find healthy food at the right price.",
+  },
+  {
+    question: "How does Foodable work?",
+    answer:
+      "Foodable works by allowing you to compare prices of food between stores.",
+  },
+  {
+    question: "How do I get started?",
+    answer:
+      "You can get started by joining our waitlist. We will notify you when we launch.",
+  },
+  {
+    question: "How does Foodable help me understand nutritional information?",
+    answer:
+      "We are working on creating an algorithm that will give you an index of how healthy a food item is based on its nutritional information.",
+  },
+];

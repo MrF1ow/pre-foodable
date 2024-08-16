@@ -8,12 +8,12 @@ import SectionLayout from "@/layouts/section";
 const Reasoning = () => {
   return (
     <SectionLayout color="#1BED95">
-      <div className="w-full text-center pb-8">
-        <h1 className={title({ size: "sm", color: "black" })}>
+      <div className="w-full text-center" style={{ paddingBottom: "2rem" }}>
+        <h1 className={title({ size: "sm", color: 'black' })}>
           Why Finding Good Healthy Food for the Right Price is Hard
         </h1>
       </div>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-row gap-4 h-[400px]">
         {reasonCards.map((card, index) => (
           <motion.div key={index} className="flex-1 min-w-0">
             <ReasonCard

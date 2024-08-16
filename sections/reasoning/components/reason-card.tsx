@@ -4,6 +4,7 @@ import { Card, CardHeader, CardBody } from "@nextui-org/card";
 const ReasonCard = ({ Icon, title, description }: CardComponentProps) => {
   return (
     <Card
+      className="h-full"
       shadow="lg"
     >
       <CardHeader className="flex items-center justify-center">
