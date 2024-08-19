@@ -4,12 +4,10 @@ import { faqQuestions } from "@/config/information";
 
 const AccordionComponent = () => {
   return (
-    <Accordion className="w-full max-w-full">
+    <Accordion>
       {faqQuestions.map((question, index) => (
         <AccordionItem key={index} title={question.question}>
-          <div className="max-w-full text-wrap break-words">
-            {question.answer}
-          </div>
+          {question.answer}
         </AccordionItem>
       ))}
     </Accordion>

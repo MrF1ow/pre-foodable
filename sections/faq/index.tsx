@@ -15,8 +15,8 @@ const Faq = () => {
           Frequently Asked Questions
         </h1>
       </div>
-      <div className="w-full flex justify-center">
-        <div className="w-1/2">
+      <div className="w-1/2 flex justify-center">
+        <div className='w-full'>
           <AccordionComponent />
         </div>
       </div>

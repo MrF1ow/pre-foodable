@@ -6,9 +6,12 @@ import { useRouter } from "next/router";
 
 import { fontSans, fontMono } from "@/config/fonts";
 import "@/styles/globals.css";
+import { initFirebase } from "@/firebase/firestoreApp";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
+
+  initFirebase();
 
   return (
     <NextUIProvider navigate={router.push}>

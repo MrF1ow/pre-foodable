@@ -16,6 +16,10 @@ import { moveIn, container } from "@/components/movements";
 import { motion } from "framer-motion";
 
 export default function IndexPage() {
+
+  // create modal component to open for them to enter their email then add them to the waitlist in firebase
+  const handleJoinWaitlist = () => {};
+
   return (
     <>
       <DefaultLayout>
